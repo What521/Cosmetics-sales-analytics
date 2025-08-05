@@ -1,0 +1,4 @@
+sqlalchemy==2.0.39
+pymysql==1.1.1
+pandas==2.2.3
+kaggle
