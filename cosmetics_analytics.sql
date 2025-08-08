@@ -27,28 +27,28 @@ WHERE rn <= 5;
 --top 5 highest revenue generating products in each month
 WITH monthly_product_revenue AS (
   SELECT
-    MONTH(date) AS mm,
+    MONTH(date) AS month,
     product,
     SUM(`amount_($)`) AS total_revenue
   FROM cosmetics_analytics
-  GROUP BY mm, product
+  GROUP BY month, product
 )
 SELECT
-  mm,
+  month,
   product,
   total_revenue
 FROM (
   SELECT
     *,
-    ROW_NUMBER() OVER (PARTITION BY mm ORDER BY total_revenue DESC) AS rn
+    ROW_NUMBER() OVER (PARTITION BY month ORDER BY total_revenue DESC) AS rn
   FROM monthly_product_revenue
 ) ranked
 WHERE rn <= 5
-ORDER BY mm, total_revenue DESC;
+ORDER BY month, total_revenue DESC;
 
 --for each product which month had the highest sales
-with cte as (SELECT product, MONTH(date) AS mon, SUM(boxes_shipped) AS sold_boxes FROM cosmetics_analytics
-GROUP BY product, mon)
+with cte as (SELECT product, MONTH(date) AS month, SUM(boxes_shipped) AS sold_boxes FROM cosmetics_analytics
+GROUP BY product, month)
 
 SELECT * FROM
 (
@@ -57,8 +57,8 @@ SELECT *, row_number() over(PARTITION BY product ORDER BY sold_boxes DESC) as rn
 WHERE rn = 1;
 
 --for each product which month did they bring in the most revenue
-with cte as (SELECT product, MONTH(date) AS mon, SUM(`amount_($)`) AS total_revenue FROM cosmetics_analytics
-GROUP BY product, mon)
+with cte as (SELECT product, MONTH(date) AS month, SUM(`amount_($)`) AS total_revenue FROM cosmetics_analytics
+GROUP BY product, month)
 
 SELECT * FROM
 (

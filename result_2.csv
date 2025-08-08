@@ -1,0 +1,31 @@
+country,product,sales,rn
+Australia,"Hair Repair Oil",2429,1
+Australia,"Vitamin C Cream",1795,2
+Australia,"Tea Tree Moisturizer",1659,3
+Australia,"Charcoal Face Wash",1388,4
+Australia,"Under Eye Cream",1370,5
+Canada,"Under Eye Cream",1572,1
+Canada,"Tea Tree Moisturizer",1559,2
+Canada,"Hydrating Face Serum",1248,3
+Canada,"SPF 50 Sunscreen",1096,4
+Canada,"Salicylic Acid Cleanser",978,5
+India,"Anti-Aging Serum",1795,1
+India,"Hair Repair Oil",1476,2
+India,"Tea Tree Moisturizer",1428,3
+India,"Aloe Vera Gel",1188,4
+India,"Body Butter Cream",1094,5
+"New Zealand","Body Butter Cream",2780,1
+"New Zealand","SPF 50 Sunscreen",2621,2
+"New Zealand","Lip Balm Pack",1966,3
+"New Zealand","Under Eye Cream",1703,4
+"New Zealand","Face Sheet Masks",1370,5
+UK,"Hydrating Face Serum",2746,1
+UK,"Aloe Vera Gel",1763,2
+UK,"Vitamin C Cream",1757,3
+UK,"Tea Tree Moisturizer",1703,4
+UK,"Body Butter Cream",1193,5
+USA,"Anti-Aging Serum",3283,1
+USA,"Rose Water Toner",1876,2
+USA,"Hydrating Face Serum",1835,3
+USA,"Niacinamide Toner",1737,4
+USA,"Hair Repair Oil",1564,5
